@@ -19,11 +19,14 @@ class Solution{
             {
                 long x=sc.nextLong();
                 System.out.println(x+" can be fitted in:");
-                isByte(x);
-                isShort(x);
-                isInteger(x);
-                isLong(x);
-                //Complete the code
+                if (x >= Byte.MIN_VALUE && x <= Byte.MAX_VALUE)
+                    System.out.println("* byte");
+                if (x >= Short.MIN_VALUE && x <= Short.MAX_VALUE)
+                    System.out.println("* short");
+                if (x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE)
+                    System.out.println("* int");
+                if (x >= Long.MIN_VALUE && x <= Long.MAX_VALUE)
+                    System.out.println("* long");
             }
             catch(Exception e)
             {
@@ -31,31 +34,8 @@ class Solution{
             }
 
         }
-
     }
-
-    public static void isShort(long x) {
-        if (Short.MIN_VALUE <= x && x <= Short.MAX_VALUE) {
-            System.out.println("* short");
-        }
-    }
-
-    public static void isInteger(long x) {
-        if (Integer.MIN_VALUE <= x && x <= Integer.MAX_VALUE) {
-            System.out.println("* int");
-        }
-    }
-
-    public static void isLong(long x) {
-        if (Long.MIN_VALUE <= x && x <= Long.MAX_VALUE) {
-            System.out.println("* long");
-        }
-    }
-
-    public static void isByte(long x) {
-        if (Byte.MIN_VALUE <= x && x <= Byte.MAX_VALUE) {
-            System.out.println("* byte");
-        }
-    }
-
 }
+
+
+
